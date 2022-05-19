@@ -16,13 +16,13 @@
         <p>The <strong><code>@layer</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
                 href="/en-US/docs/Web/CSS/At-rule">at-rule</a> is used to declare a cascade layer and can also be used
             to define the order of precedence in case of multiple cascade layers.</p>
-        <h2><a href="#syntax">Syntax</a></h2>
+        <h2><a href="#syntax" id="syntax">Syntax</a></h2>
         <pre><code>@layer layer-name {rules};
 @layer layer-name;
 @layer layer-name, layer-name, layer-name;
 @layer {rules};
 </code></pre>
-        <p><button>Copy to Clipboard</button></p>
+        <p><button>Copy to Clipboard</button> <input type="button" value="Copy to Clipboard"> <input type="submit" value="Copy to Clipboard"> <input type="reset" value="Copy to Clipboard"> <input type="button" value="Copy to Clipboard" disabled> <input type="reset" value="Copy to Clipboard" disabled></p>
         <p>where:</p>
         <dl>
             <dt><em>layer-name</em></dt>
@@ -34,7 +34,7 @@
                 <p>Is the set of CSS rules in the cascade layer.</p>
             </dd>
         </dl>
-        <h2><a href="#description">Description</a></h2>
+        <h2><a href="#description" id="description">Description</a></h2>
         <p>Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any
             styles not in a layer are gathered together and placed into a single anonymous layer that comes after all
             the declared layers, named and anonymous. This means that any styles declared outside of a layer will
@@ -92,7 +92,7 @@
         <pre><code>@import 'theme.css' layer(utilities);
 </code></pre>
         <p><button>Copy to Clipboard</button></p>
-        <h3><a href="#nesting_layers">Nesting layers</a></h3>
+        <h3><a href="#nesting_layers" id="nesting_layers">Nesting layers</a></h3>
         <p>Layers may be nested. For example:</p>
         <pre><code>@layer framework {
     @layer layout {
@@ -110,12 +110,12 @@
 }
 </code></pre>
         <p><button>Copy to Clipboard</button></p>
-        <h2><a href="#formal_syntax">Formal syntax</a></h2>
+        <h2><a href="#formal_syntax" id="formal_syntax">Formal syntax</a></h2>
         <pre>@layer <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">[</a> &lt;layer-name&gt;<a href="/en-US/docs/Web/CSS/Value_definition_syntax#hash_mark">#</a> <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar">|</a> &lt;layer-name&gt;<a href="/en-US/docs/Web/CSS/Value_definition_syntax#question_mark">?</a> {
     &lt;stylesheet&gt;
 } <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">]</a></pre>
-        <h2><a href="#examples">Examples</a></h2>
-        <h3><a href="#simple_example">Simple example</a></h3>
+        <h2><a href="#examples" id="examples">Examples</a></h2>
+        <h3><a href="#simple_example" id="simple_example">Simple example</a></h3>
         <p>In the following example, two CSS rules are created. One for the
             <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> element outside of any layer and one
             inside a layer named <code>type</code> for <code>.box p</code>.</p>
@@ -145,7 +145,7 @@
 </code></pre>
         <p><button>Copy to Clipboard</button></p>
         <h4>Result</h4>
-        <h3><a href="#assigning_rules_to_existing_layers">Assigning rules to existing layers</a></h3>
+        <h3><a href="#assigning_rules_to_existing_layers" id="assigning_rules_to_existing_layers">Assigning rules to existing layers</a></h3>
         <p>In the following example, two layers are created with no rules applied, then CSS rules are applied to the two
             layers. The <code>base</code> layer defines a color, border, font-size, and padding. The
             <code>special</code> layer defines a different color. As <code>special</code> comes last when the layers
@@ -178,7 +178,7 @@
 </code></pre>
         <p><button>Copy to Clipboard</button></p>
         <h4>Result</h4>
-        <h2><a href="#specifications">Specifications</a></h2>
+        <h2><a href="#specifications" id="specifications">Specifications</a></h2>
         <table>
             <thead>
                 <tr>

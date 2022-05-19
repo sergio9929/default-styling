@@ -4,9 +4,37 @@
     margin: 0;
 }
 
-:focus, :focus-visible {
-    outline-offset: .2rem;
-    outline-color: inherit;
+@media (hover: hover) and (pointer: fine) {
+    :focus-visible {
+        outline-offset: .2rem;
+        outline-color: inherit;
+        outline-width: .1rem;
+        outline-style: solid;
+        border-radius: .2em;
+    }
+
+    :focus-visible:active {
+        outline-offset: .1rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    :focus-visible {
+        outline: none;
+    }
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) :target::before {
+    content: '👀 ';
+}
+
+:disabled {
+    opacity: .6;
+    pointer-events: none;
+}
+
+[id] {
+    scroll-margin-top: 4rem;
 }
 
 html {
@@ -15,6 +43,7 @@ html {
     line-height: var(--text-line-height);
     color: var(--text);
     background-color: var(--background);
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -108,6 +137,7 @@ code {
     padding: .125em .4em;
     color: var(--title);
     border-radius: .2em;
+    font-size: .9rem;
 }
 
 table {
@@ -148,6 +178,44 @@ hr {
     margin-block: 1.5em;
     border: 0;
     border-top: .1rem dashed var(--border);
+}
+
+button, .button, [type="button"], [type="submit"], [type="reset"] {
+    --button-hover-shadow: var(--shadow, black);
+    --button-transform: translateY(-.2em);
+    display: inline-block;
+    background-color: var(--text-background);
+    padding: .5em 1em;
+    border: .1rem solid var(--border);
+    border-radius: .2em;
+    cursor: pointer;
+    color: inherit;
+
+    -webkit-appearance: none;
+}
+
+[type="submit"] {
+    --button-hover-shadow: var(--link-shadow);
+    font-weight: bold;
+    color: var(--background);
+    background-color: var(--link-background);
+    outline-color: var(--link);
+}
+
+[type="reset"] {
+    --button-hover-shadow: var(--muted-shadow);
+    --button-transform: translateY(-.1em);
+    background-color: var(--background);
+}
+
+:is(button, .button, [type="button"], [type="submit"], [type="reset"]):hover {
+    transform: var(--button-transform);
+    box-shadow: 0 .5em 1em var(--button-hover-shadow);
+}
+
+:is(button, .button, [type="button"], [type="submit"], [type="reset"]):active {
+    transform: translateY(0);
+    box-shadow: 0 .3em .6em var(--button-hover-shadow);
 }
 
 @media (max-width: 1920px) {
