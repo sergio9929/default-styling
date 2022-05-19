@@ -1,0 +1,24 @@
+@layer reset, theme, default, style;
+
+@import 'reset.css' layer(reset);
+@import 'theme.css' layer(theme);
+@import 'default.css' layer(default);
+
+@layer style {
+    .container {
+        max-width: 60rem;
+        margin-inline: auto;
+    }
+
+    body {
+        padding: 4rem 1.5rem;
+    }
+
+    .text>:first-child {
+        margin-block-start: 0;
+    }
+
+    .text>:last-child {
+        margin-block-end: 0;
+    }
+}

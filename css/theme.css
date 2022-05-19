@@ -1,0 +1,26 @@
+:root {
+    --title: rgb(0 0 0);
+    --title-line-height: 1.1em;
+    --text: rgb(0 0 0 / 90%);
+    --text-line-height: 1.5em;
+    --text-background: rgb(0 0 0 / 10%);
+    --background: rgb(255 255 255);
+    --border: rgb(0 0 0 / 20%);
+    --link: rgb(89 89 189);
+    --link-background: rgb(89 89 189);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --title: rgb(255 255 255);
+        --text: rgb(255 255 255 / 90%);
+        --text-background: rgb(255 255 255 / 10%);
+        --background: rgb(27 27 32);
+        --border: rgb(255 255 255 / 20%);
+        --link: rgb(112 218 112);
+    }
+
+    html {
+        color-scheme: dark;
+    }
+}
