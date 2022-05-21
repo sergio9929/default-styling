@@ -4,10 +4,14 @@
     --text: rgb(0 0 0 / 90%);
     --text-line-height: 1.5em;
     --text-background: rgb(0 0 0 / 8%);
+    --block: var(--title);
+    --block-background: rgb(0 0 0 / 5%);
     --background: rgb(255 255 255);
     --border: rgb(0 0 0 / 20%);
-    --link: rgb(89 89 189);
-    --link-background: rgb(89 89 189);
+    --link: rgb(69 89 194);
+    --link-background: var(--link);
+    --button: var(--title);
+    --button-background: var(--text-background);
     --shadow: rgb(0 0 0 / 15%);
     --muted-shadow: rgb(0 0 0 / 8%);
     --link-shadow: rgb(89 89 189 / 30%);
@@ -18,10 +22,10 @@
         --title: rgb(255 255 255);
         --text: rgb(255 255 255 / 90%);
         --text-background: rgb(255 255 255 / 10%);
+        --block-background: rgb(255 255 255 / 8%);
         --background: rgb(27 27 32);
         --border: rgb(255 255 255 / 20%);
         --link: rgb(112 218 112);
-        --link-background: rgb(112 218 112);
         --shadow: rgb(255 255 255 / 10%);
         --muted-shadow: rgb(255 255 255 / 3%);
         --link-shadow: rgb(112 218 112 / 15%);
