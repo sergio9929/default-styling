@@ -102,8 +102,24 @@ i, em {}
 
 u, ins {}
 
+:is(ul, ol) li::marker {
+    font-weight: bold;
+}
+
+ul ul ul {
+    list-style-type: '-   ';
+}
+
+ol ol {
+    list-style-type: lower-latin;
+}
+
+ol ol ol {
+    list-style-type: lower-greek;
+}
+
 ul, ol, dl {
-    margin-block: 1.5em;
+    margin-block-end: var(--text-line-height);
 }
 
 ul, ol, dd {
@@ -123,7 +139,7 @@ pre {
     background-color: var(--block-background);
     color: var(--block);
     padding: .5rem 1rem;
-    margin-block-end: 1.5rem;
+    margin-block-end: var(--text-line-height);
     border-radius: .5rem;
     overflow-x: auto;
 }
@@ -145,23 +161,48 @@ code {
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
+    margin-block-end: var(--text-line-height);
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
-table, td, th {
-    border: .1rem solid var(--border);
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--background);
+    border: 10px solid white;
 }
 
-td, th {
+caption {
+    margin-block-end: .5rem;
+}
+
+table tr:first-of-type :is(td, th) {
+    border-top-width: .1rem;
+}
+
+thead+tbody tr:first-of-type :is(td, th) {
+    border-top-width: 0;
+}
+
+table :is(td, th) {
+    border-width: 0 .1rem .1rem 0;
+    border-style: solid;
+    border-color: var(--border);
     padding: .5rem 1rem;
+}
+
+table :is(td, th):first-of-type {
+    border-left-width: .1rem;
 }
 
 img {
     display: block;
     width: auto;
     max-width: 100%;
-    margin-block-end: 1.5em;
+    margin-block-end: var(--text-line-height);
     border-radius: .5rem;
 }
 
@@ -179,7 +220,7 @@ br {
 }
 
 hr {
-    margin-block: 1.5em;
+    margin-block: var(--text-line-height);
     border: 0;
     border-top: .1rem dashed var(--border);
 }
