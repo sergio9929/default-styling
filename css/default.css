@@ -198,6 +198,10 @@ table :is(td, th):first-of-type {
     border-left-width: .1rem;
 }
 
+table img {
+    margin: 0;
+}
+
 img {
     display: block;
     width: auto;
