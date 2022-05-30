@@ -102,7 +102,7 @@ i, em {}
 
 u, ins {}
 
-:is(ul, ol) li::marker {
+:where(ul, ol) li::marker {
     font-weight: bold;
 }
 
@@ -167,34 +167,41 @@ table {
     border-spacing: 0;
 }
 
+table.collapsed {
+    border-collapse: collapse;
+}
+
+table.collapsed, table.collapsed :is(td, th) {
+    border-width: .1rem;
+}
+
 thead {
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: var(--background);
-    border: 10px solid white;
 }
 
 caption {
     margin-block-end: .5rem;
 }
 
-table tr:first-of-type :is(td, th) {
+table tr:first-of-type :where(td, th) {
     border-top-width: .1rem;
 }
 
-thead+tbody tr:first-of-type :is(td, th) {
+thead+tbody tr:first-of-type :where(td, th) {
     border-top-width: 0;
 }
 
-table :is(td, th) {
+table :where(td, th) {
     border-width: 0 .1rem .1rem 0;
     border-style: solid;
     border-color: var(--border);
     padding: .5rem 1rem;
 }
 
-table :is(td, th):first-of-type {
+table :where(td, th):first-of-type {
     border-left-width: .1rem;
 }
 
@@ -264,13 +271,13 @@ button, .button, [type="button"], [type="submit"], [type="reset"] {
 }
 
 @media (hover: hover) {
-    :is(button, .button, [type="button"], [type="submit"], [type="reset"]):hover {
+    :where(button, .button, [type="button"], [type="submit"], [type="reset"]):hover {
         transform: var(--button-hover-transform);
         box-shadow: 0 .5em 1em var(--button-hover-shadow);
     }
 }
 
-:is(button, .button, [type="button"], [type="submit"], [type="reset"]):active {
+:where(button, .button, [type="button"], [type="submit"], [type="reset"]):active {
     transform: translateY(0);
     box-shadow: 0 .3em .6em var(--button-hover-shadow);
 }
