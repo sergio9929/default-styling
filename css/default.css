@@ -47,10 +47,6 @@ html {
     scroll-margin-top: 4rem;
 }
 
-input {
-    font-family: 'Roboto', 'Poppins', sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
     margin-block-start: 1.5em;
     margin-block-end: 1em;
@@ -240,15 +236,19 @@ hr {
     border-top: .1rem dashed var(--border);
 }
 
+input, button {
+    font-family: inherit;
+}
+
 button, .button, [type="button"], [type="submit"], [type="reset"] {
     --button-hover-shadow: var(--shadow, black);
     --button-hover-transform: translateY(-.2em);
     --button-color: var(--button);
     --button-background-color: var(--button-background);
-    
+
     display: inline-flex;
     align-items: center;
-    font-size: inherit;
+    font-size: .9rem;
     line-height: inherit;
     text-align: center;
 
