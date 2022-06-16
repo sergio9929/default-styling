@@ -47,6 +47,10 @@ html {
     scroll-margin-top: 4rem;
 }
 
+input {
+    font-family: 'Roboto', 'Poppins', sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-block-start: 1.5em;
     margin-block-end: 1em;
@@ -241,7 +245,13 @@ button, .button, [type="button"], [type="submit"], [type="reset"] {
     --button-hover-transform: translateY(-.2em);
     --button-color: var(--button);
     --button-background-color: var(--button-background);
-    display: inline-block;
+    
+    display: inline-flex;
+    align-items: center;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: center;
+
     background-color: var(--button-background-color);
     color: var(--button-color);
     padding: .5em 1em;
