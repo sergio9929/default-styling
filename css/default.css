@@ -253,6 +253,7 @@ button, .button, [type="button"], [type="submit"], [type="reset"] {
     transition: transform, box-shadow;
     transition-duration: .1s;
 
+    appearance: none;
     -webkit-appearance: none;
 }
 
