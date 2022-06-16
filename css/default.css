@@ -267,6 +267,7 @@ button, .button, [type="button"], [type="submit"], [type="reset"] {
     -webkit-appearance: none;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 [type="submit"] {
