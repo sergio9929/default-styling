@@ -265,6 +265,8 @@ button, .button, [type="button"], [type="submit"], [type="reset"] {
 
     appearance: none;
     -webkit-appearance: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 [type="submit"] {
